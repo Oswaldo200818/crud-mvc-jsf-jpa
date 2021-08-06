@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Editar Usuario</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+    </h:head>
+    <h:body>
+        <h:form id="form" class="w-50 mx-auto d-block">
+            <h2 class="text-center"><h:outputText value="Editar Usuario"></h:outputText></h2>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <h:outputLabel for="user">Nombre usuario</h:outputLabel>
+                </div>
+                <div class="col-sm-12">
+                    <h:inputText id="user-id" value="#{usersBean.users.name}" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group pt-2">
+                <div class="col-sm-12">
+                    <h:outputLabel for="email">Email</h:outputLabel>
+                </div>
+                <div class="col-sm-12">
+                    <h:inputText id="email-id" value="#{usersBean.userseleccionado.email}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group pt-2">
+                <div class="col-sm-12">
+                    <h:outputLabel for="clave">Clave</h:outputLabel>
+                </div>
+                <div class="col-sm-12">
+                    <h:inputSecret id="clave-id" value="#{usersBean.userseleccionado.password}" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group pt-2">
+                <div class="col-sm-12">
+                    <h:outputLabel for="direccion">Dirección</h:outputLabel>
+                </div>
+                <div class="col-sm-12">
+                    <h:inputText id="direccion-id" value="#{usersBean.userseleccionado.address}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group pt-2">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h:commandButton value="Actualizar Usuario" class="btn btn-success w-100" />
+                    </div>
+                    <div class="col-sm-6">
+                        <h:link value="Menu Principal" outcome="index" class="btn btn-info w-100" />
+                    </div>  
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"/>
+</html>
